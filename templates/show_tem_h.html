@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Condition</title>
+		<style>
+  			table {
+    				width: 100%;
+  			}
+			th{
+				padding-bottom : 10px;
+			}
+			tr{
+				padding :10px;
+			}
+			td{
+				text-align : center;
+				border: 1px solid black;
+			}
+</style>
+	</head>
+	<body>
+		<h1 align="center">Condition</h1>
+		<table>
+			<tr>
+				<th>시간</th>
+				<th>온도</th>
+				<th>습도</th>
+				<th>광도</th>
+				<th>토양수분도</th>
+			</tr>
+			{%for i in range(count)%}
+			<tr>
+				<td width="20%" border-color="gray">{{condition[i][0]}}</td>
+				<td width="20%">{{condition[i][1]}}</td>
+				<td width="20%">{{condition[i][2]}}</td>
+				<td width="20%">{{condition[i][3]}}</td>
+				<td width="20%">{{condition[i][4]}}</td>
+			</tr>
+			{%endfor%}
+		</table>
+	</body>
+</html>
